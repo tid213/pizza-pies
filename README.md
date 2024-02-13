@@ -38,7 +38,6 @@ Make sure you have the following installed:
 3. Install dependencies:
     ```
     bundle install
-    yarn install
     ```
 4. Set up the database:
     ```
