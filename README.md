@@ -48,18 +48,18 @@ Make sure you have the following installed:
 
 ### Running Locally
 
-    Start the Rails server:
+1. Start the Rails server:
 
     ```
     rails server
     ```
 
-    Visit http://localhost:3000 in your web browser to access Pizza Pies.
+2. Visit http://localhost:3000 in your web browser to access Pizza Pies.
 
 ### Running Tests
 
     To run tests, use the following command:
-    
+
     ```
     rails test
     ```
