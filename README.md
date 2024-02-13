@@ -1,24 +1,57 @@
-# README
+# Pizza Pies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the Pizza Pies! This Ruby on Rails application allows users to create and manage pizzas with various toppings.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- **Pizza Management:** Create, edit, and delete pizzas with a variety of toppings.
+- **Topping Management:** Maintain a list of available pizza toppings.
+- **Validation:** Ensure unique combinations of toppings for each pizza.
+- **User Interface:** Simple and intuitive interface for managing pizzas and toppings.
 
-* System dependencies
+## Getting Started
 
-* Configuration
+Follow these steps to set up and run the Pizza App locally on your machine.
 
-* Database creation
+### Prerequisites
 
-* Database initialization
+Make sure you have the following installed:
 
-* How to run the test suite
+- [Ruby](https://www.ruby-lang.org/)
+- [Ruby on Rails](https://rubyonrails.org/)
 
-* Services (job queues, cache servers, search engines, etc.)
+### Installation
 
-* Deployment instructions
+1. Clone the repository:
 
-* ...
+   git clone https://github.com/tid213/pizza-pies.git
+
+2. Navigate to the project directory:
+
+    cd pizza-pies
+
+3. Install dependencies:
+
+    bundle install
+    yarn install
+
+4. Set up the database:
+
+    rails db:create
+    rails db:migrate
+
+### Running Locally
+
+    Start the Rails server:
+    rails server
+
+    Visit http://localhost:3000 in your web browser to access Pizza Pies.
+
+### Running Tests
+
+    To run tests, use the following command:
+    rails test
+
+### Contributing
+
+    Feel free to contribute to the development of the Pizza App by opening issues or creating pull requests. Your feedback and contributions are highly appreciated!
