@@ -65,5 +65,4 @@ Make sure you have the following installed:
     ```
 
 ### Contributing
-
-    Feel free to contribute to the development of Pizza Pies by opening issues or creating pull requests. Your feedback and contributions are highly appreciated!
+Feel free to contribute to the development of Pizza Pies by opening issues or creating pull requests. Your feedback and contributions are highly appreciated!
