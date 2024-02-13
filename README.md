@@ -58,7 +58,7 @@ Make sure you have the following installed:
 
 ### Running Tests
 
-    To run tests, use the following command:
+1. To run tests, use the following command:
 
     ```
     rails test
