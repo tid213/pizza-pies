@@ -49,6 +49,7 @@ Make sure you have the following installed:
 ### Running Locally
 
     Start the Rails server:
+
     ```
     rails server
     ```
@@ -58,6 +59,7 @@ Make sure you have the following installed:
 ### Running Tests
 
     To run tests, use the following command:
+    
     ```
     rails test
     ```
