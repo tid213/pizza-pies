@@ -19,7 +19,7 @@ class ToppingsController < ApplicationController
         @topping = Topping.new(topping_params)
  
         if @topping.save
-            redirect_to @topping
+            redirect_to toppings_url
           else
             render 'new'
         end
@@ -29,7 +29,7 @@ class ToppingsController < ApplicationController
         @topping = Topping.find(params[:id])
        
         if @topping.update(topping_params)
-          redirect_to @topping
+          redirect_to toppings_url
         else
           render 'edit'
         end
