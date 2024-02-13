@@ -19,7 +19,6 @@ Make sure you have the following installed:
 
 - [Ruby](https://www.ruby-lang.org/)
 - [Ruby on Rails](https://rubyonrails.org/)
-- [Yarn](https://yarnpkg.com/)
 
 ### Installation
 
