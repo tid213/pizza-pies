@@ -19,39 +19,49 @@ Make sure you have the following installed:
 
 - [Ruby](https://www.ruby-lang.org/)
 - [Ruby on Rails](https://rubyonrails.org/)
+- [Yarn](https://yarnpkg.com/)
 
 ### Installation
 
 1. Clone the repository:
 
+   ```
    git clone https://github.com/tid213/pizza-pies.git
+   ```
 
 2. Navigate to the project directory:
 
+    ```
     cd pizza-pies
+    ```
 
 3. Install dependencies:
-
+    ```
     bundle install
     yarn install
-
+    ```
 4. Set up the database:
-
+    ```
     rails db:create
     rails db:migrate
+    ```
 
 ### Running Locally
 
     Start the Rails server:
+    ```
     rails server
+    ```
 
     Visit http://localhost:3000 in your web browser to access Pizza Pies.
 
 ### Running Tests
 
     To run tests, use the following command:
+    ```
     rails test
+    ```
 
 ### Contributing
 
-    Feel free to contribute to the development of the Pizza App by opening issues or creating pull requests. Your feedback and contributions are highly appreciated!
+    Feel free to contribute to the development of Pizza Pies by opening issues or creating pull requests. Your feedback and contributions are highly appreciated!
