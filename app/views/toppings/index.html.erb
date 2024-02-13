@@ -1,8 +1,14 @@
 <h1>Listing toppings</h1>
- 
+
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
 <table>
   <tr>
-    <th>Name</th>
+    <th>Topping</th>
   </tr>
  
   <% @toppings.each do |topping| %>

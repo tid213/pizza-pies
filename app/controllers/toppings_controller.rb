@@ -37,12 +37,21 @@ class ToppingsController < ApplicationController
 
     def destroy
         @topping = Topping.find(params[:id])
-        @topping.destroy
-       
-        redirect_to toppings_path
+        begin
+            @topping.destroy
+            redirect_to toppings_path, notice: 'Topping was successfully deleted.'
+        rescue ActiveRecord::InvalidForeignKey => e
+            # Handle the error gracefully
+            flash.now[:alert] = 'Cannot delete the topping as it is associated with active pizzas.'
+            set_toppings
+            render :index, status: 422
+        end
     end
 
     private
+        def set_toppings
+            @toppings = Topping.all
+        end
         def set_topping
             @topping = Topping.find(params[:id])
         end
