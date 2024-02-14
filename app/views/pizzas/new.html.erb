@@ -1,31 +1,35 @@
-<h1>New Pizza</h1>
+<div class="page-container">
+    <div class="page"> 
+        <h1>Create Pizza</h1>
 
-<%= form_with(model: @pizza, url: pizzas_path, method: :post, data: { turbo: false }) do |form| %>
-  <% if @pizza.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pizza.errors.count, "error") %> prohibited this pizza from being saved:</h2>
+        <%= form_with(model: @pizza, url: pizzas_path, method: :post, data: { turbo: false }) do |form| %>
+        <% if @pizza.errors.any? %>
+            <div id="error_explanation">
+            <h2><%= pluralize(@pizza.errors.count, "error") %> prohibited this pizza from being saved:</h2>
 
-      <ul>
-        <% @pizza.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+            <ul>
+                <% @pizza.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+            </ul>
+            </div>
         <% end %>
-      </ul>
+
+        <div class="field">
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+        </div>
+
+        <div class="field">
+            <%= form.label :topping_ids, "Select Toppings" %>
+            <%= form.collection_check_boxes(:topping_ids, Topping.all, :id, :name) %>
+        </div>
+
+        <div class="actions">
+            <%= form.submit %>
+        </div>
+        <% end %>
+
+        <span class="button-single"><%= link_to 'Back', pizzas_path %></span>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :topping_ids, "Select Toppings" %>
-    <%= form.collection_check_boxes(:topping_ids, Topping.all, :id, :name) %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', pizzas_path %>
+</div>

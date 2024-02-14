@@ -1,28 +1,32 @@
-<h1>New Topping</h1>
+<div class="page-container">
+    <div class="page">  
+        <h1>Create Topping</h1>
 
-<%= form_with scope: :topping, url: toppings_path, data: { turbo: false }, local: true do |form| %>
-    <% if @topping.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@topping.errors.count, "error") %> prohibited
-        this topping from being saved:
-      </h2>
-      <ul>
-        <% @topping.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+        <%= form_with scope: :topping, url: toppings_path, data: { turbo: false }, local: true do |form| %>
+            <% if @topping.errors.any? %>
+            <div id="error_explanation">
+            <h2>
+                <%= pluralize(@topping.errors.count, "error") %> prohibited
+                this topping from being saved:
+            </h2>
+            <ul>
+                <% @topping.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+            </ul>
+            </div>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
-    
-    <p>
-      <%= form.label :name %><br>
-      <%= form.text_field :name %>
-    </p>
-   
-    <p>
-      <%= form.submit %>
-    </p>
-<% end %>
+            
+            <p>
+            <%= form.label :name %><br>
+            <%= form.text_field :name %>
+            </p>
+        
+            <p>
+            <%= form.submit %>
+            </p>
+        <% end %>
 
-<%= link_to 'Back', toppings_path %>
+        <span class="button-single"><%= link_to 'Back', toppings_path %></span>
+    </div>
+</div>

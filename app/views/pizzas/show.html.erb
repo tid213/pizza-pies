@@ -1,9 +1,13 @@
-<h1><%= @pizza.name %></h1>
+<div class="page-container">
+    <div class="page"> 
+        <h1><%= @pizza.name %></h1>
 
-<p><strong>Toppings:</strong> <%= @pizza.toppings.pluck(:name).join(', ') %></p>
+        <p><strong>Toppings:</strong> <%= @pizza.toppings.pluck(:name).join(', ') %></p>
 
-<%= link_to 'Edit', edit_pizza_path(@pizza) %> | 
-<%= link_to 'Delete', pizza_path(@pizza),
-                        method: :delete,
-                        data: { turbo_method: :delete  } %> |
-<%= link_to 'Back', pizzas_path %>
+        <span class="button"><%= link_to 'Edit', edit_pizza_path(@pizza) %></span> 
+        <span class="button"><%= link_to 'Delete', pizza_path(@pizza),
+                                method: :delete,
+                                data: { turbo_method: :delete  } %></span>
+        <span class="button"><%= link_to 'Back', pizzas_path %></span>
+    </div>
+</div>

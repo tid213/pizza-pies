@@ -14,11 +14,21 @@
  *= require_self
  */
 
-table{
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
+form{
+    margin-bottom: 2rem;
 }
+body{
+    background-color: #4681f4;
+    font-family: "Inter", sans-serif;
+}
+input[type="submit" i] {
+    margin-top: .5rem;
+}
+
+input[type="checkbox" i] {
+    margin-top: 1rem;
+}
+
 
  .page-container{
     text-align: center;
@@ -30,11 +40,12 @@ table{
  }
  
  .page{
-    border: 1px solid black;
     border-radius: 10px;
     margin-top: 5%;
-    padding: 5rem 10rem 5rem 10rem;
-    background-color: rgb(235, 235, 235);
+    padding: 3rem 5rem 3rem 5rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: auto;
  }
 
  .page h1{
@@ -53,8 +64,13 @@ table{
     border-radius: 10px;
     margin-right: 1rem;
  }
+ .button-single{
+    background-color: #4681f4;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 10px;
+ }
 
- .button a{
+ .button a, .button-single a{
     color: white;
     text-decoration: none;
  }
@@ -64,13 +80,34 @@ table{
  }
  .list li{
     list-style: none;
-    background-color: white;
+    background-color: rgb(212, 212, 212, .5);
     padding: .5rem;
     margin-bottom: .5rem;
     border-radius: 10px;
+ }
+ .list li:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+
+ .list li a {
+    color: black;
+ }
+ .list li a:hover{
+    cursor: pointer;
  }
  .list ul{
     margin: 0;
     padding-inline-start: 0;
     padding: 0;
+ }
+ @media only screen and (max-width: 800px) {
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .button{
+        margin-bottom: .5rem;
+    }
+
  }

@@ -1,6 +1,6 @@
 <div class="page-container">
     <div class="page">
-        <h1>Listing toppings</h1>
+        <h1>Pizza Toppings</h1>
 
         <% if flash[:alert] %>
         <div class="alert alert-danger">
@@ -11,11 +11,7 @@
         <ul>        
         <% @toppings.each do |topping| %>
             <li>
-            <%= topping.name %>
-            <%= link_to 'Edit', edit_topping_path(topping) %>
-            <%= link_to 'Delete', topping_path(topping),
-                    method: :delete,
-                    data: { turbo_method: :delete  } %>
+            <%= link_to topping.name, topping_path(topping) %>
             </li>
         <% end %>
         </ul>
