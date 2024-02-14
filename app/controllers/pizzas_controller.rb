@@ -20,7 +20,7 @@ class PizzasController < ApplicationController
         
         if @pizza.valid?
             @pizza.save
-            redirect_to @pizza
+            redirect_to pizzas_path
         else
             render 'new'
         end
@@ -30,7 +30,7 @@ class PizzasController < ApplicationController
         @pizza = Pizza.find(params[:id])
        
         if @pizza.update(pizza_params)
-          redirect_to @pizza
+          redirect_to pizzas_path
         else
           render 'edit'
         end

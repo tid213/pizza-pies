@@ -1,5 +1,12 @@
-<h1>Let's make pizza!</h1>
 
-<span class="button"><%= link_to 'New Pizza', new_pizza_path %></span>
-<%= link_to 'View Pizzas', controller: 'pizzas' %>
-<%= link_to 'View Toppings', controller: 'toppings' %>
+<div class="page-container">
+    <div class="page">
+        <h1>Let's make pizza!</h1>
+        <div class="buttons">
+            <span class="button"><%= link_to 'New Pizza', new_pizza_path %></span>
+            <span class="button"><%= link_to 'View Pizzas', controller: 'pizzas' %></span>
+            <span class="button"><%= link_to 'View Toppings', controller: 'toppings' %></span>
+        </div>
+    </div>
+
+</div>

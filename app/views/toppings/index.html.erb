@@ -1,27 +1,28 @@
-<h1>Listing toppings</h1>
+<div class="page-container">
+    <div class="page">
+        <h1>Listing toppings</h1>
 
-<% if flash[:alert] %>
-  <div class="alert alert-danger">
-    <%= flash[:alert] %>
-  </div>
-<% end %>
-
-<table>
-  <tr>
-    <th>Topping</th>
-  </tr>
- 
-  <% @toppings.each do |topping| %>
-    <tr>
-      <td><%= topping.name %></td>
-      <td><%= link_to 'Show', topping_path(topping) %></td>
-      <td><%= link_to 'Edit', edit_topping_path(topping) %></td>
-      <td><%= link_to 'Delete', topping_path(topping),
-              method: :delete,
-              data: { turbo_method: :delete  } %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= link_to 'New topping', new_topping_path %>
-<%= link_to 'Back', '/' %>
+        <% if flash[:alert] %>
+        <div class="alert alert-danger">
+            <%= flash[:alert] %>
+        </div>
+        <% end %>
+      <div class="list">
+        <ul>        
+        <% @toppings.each do |topping| %>
+            <li>
+            <%= topping.name %>
+            <%= link_to 'Edit', edit_topping_path(topping) %>
+            <%= link_to 'Delete', topping_path(topping),
+                    method: :delete,
+                    data: { turbo_method: :delete  } %>
+            </li>
+        <% end %>
+        </ul>
+      </div>
+      <div class="buttons">
+        <span class="button"><%= link_to 'New topping', new_topping_path %></span>
+        <span class="button"><%= link_to 'Back', '/' %></span>
+      </div>
+    </div>
+</div>
