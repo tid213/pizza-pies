@@ -2,11 +2,14 @@
     <div class="page">  
         <h1><%= @topping.name %></h1>
         <p>Edit or delete this topping</p>
-        <span class="button"><%= link_to 'Edit', edit_topping_path(@topping) %></span>
-        <span class="button"><%= link_to 'Delete', topping_path(@topping),
-                            method: :delete,
-                            data: { turbo_method: :delete  } %></span>
-        <span class="button"><%= link_to 'Back', toppings_path %></span>
+        <div class="buttons">
+            <span class="button"><%= link_to 'Edit', edit_topping_path(@topping) %></span>
+            <span class="button"><%= link_to 'Delete', topping_path(@topping),
+                                method: :delete,
+                                data: { turbo_method: :delete  } %></span>
+            <span class="button"><%= link_to 'Back', toppings_path %></span>
+    
+        </div>
     </div>
 </div>
 
