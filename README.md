@@ -9,6 +9,9 @@ Welcome to the Pizza Pies! This Ruby on Rails application allows users to create
 - **Validation:** Ensure unique combinations of toppings for each pizza.
 - **User Interface:** Simple and intuitive interface for managing pizzas and toppings.
 
+## About This Project
+As a Rails newbie, I embarked on the journey of building Pizza Pies, and I found Rails to be an excellent companion for setting up the backend. The built-in helpers and conventions made the development process smooth and enjoyable. I opted for Heroku's PostgreSQL as the database, ensuring a robust and scalable solution for storing pizza creations.
+
 ## Getting Started
 
 Follow these steps to set up and run the Pizza App locally on your machine.
