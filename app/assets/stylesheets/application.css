@@ -44,7 +44,7 @@ input[type="checkbox" i] {
     margin-top: 5%;
     padding: 3rem 5rem 3rem 5rem;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
     height: auto;
  }
 
@@ -63,6 +63,9 @@ input[type="checkbox" i] {
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 10px;
     margin-right: 1rem;
+ }
+ .button:hover{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 4px;
  }
  .button-single{
     background-color: #4681f4;
