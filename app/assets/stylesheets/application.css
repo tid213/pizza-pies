@@ -102,13 +102,15 @@ input[type="checkbox" i] {
     padding: 0;
  }
  @media only screen and (max-width: 800px) {
-
     .buttons{
         display: flex;
         flex-direction: column;
     }
     .button{
         margin-bottom: .5rem;
+    }
+    .page{
+        margin-top: 25%;
     }
 
  }
