@@ -4,19 +4,19 @@ class Pizza < ApplicationRecord
     validates :name, presence: true, :uniqueness => true,
                     length: { minimum: 1 }
 
-    validate :unique_toppings_combination, on: :create
+    validate :unique_toppings_combination, on: [:create, :update]
 
 
     private
     def unique_toppings_combination
-        existing_pizza = Pizza.joins(:pizza_toppings)
-        .where(pizza_toppings: { topping_id: topping_ids.sort })
-        .group(:id)
-        .having('COUNT(pizza_toppings.topping_id) = ?', toppings.size)
-        .select { |pizza| (pizza.toppings.pluck(:id).sort - topping_ids.sort).empty? }
-        .first
+        existing_pizzas = Pizza.joins(:pizza_toppings)
+                           .where(pizza_toppings: { topping_id: topping_ids.sort })
+                           .group(:id)
+                           .having('COUNT(pizza_toppings.topping_id) = ?', toppings.size)
+                           .select { |pizza| (pizza.toppings.pluck(:id).sort - topping_ids.sort).empty? }
+                           .reject { |pizza| pizza.id == id } # Exclude the current pizza being edited
 
-        if existing_pizza.present?
+        if existing_pizzas.present?
             errors.add(:base, "A pizza with the same toppings already exists.")
         end
     end
