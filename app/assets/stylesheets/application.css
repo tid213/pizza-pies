@@ -24,12 +24,9 @@ body{
 input[type="submit" i] {
     margin-top: .5rem;
 }
-
 input[type="checkbox" i] {
     margin-top: 1rem;
 }
-
-
  .page-container{
     text-align: center;
     width: 100%;
@@ -38,7 +35,6 @@ input[type="checkbox" i] {
     justify-content: center;
     align-items: center;
  }
- 
  .page{
     border-radius: 10px;
     margin-top: 5%;
@@ -47,13 +43,11 @@ input[type="checkbox" i] {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
     height: auto;
  }
-
  .page h1{
     padding: 0;
     margin: 0;
     margin-bottom: 1rem;
  }
-
  .buttons{
     margin-top: 2rem;
     width: 100%;
@@ -64,18 +58,15 @@ input[type="checkbox" i] {
     border-radius: 10px;
     margin-right: 1rem;
  }
- 
  .button-single{
     background-color: #4681f4;
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 10px;
  }
-
  .button a, .button-single a{
     color: white;
     text-decoration: none;
  }
- 
  .list a{
     text-decoration: none;
  }
@@ -89,7 +80,6 @@ input[type="checkbox" i] {
  .list li:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
  }
-
  .list li a {
     color: black;
  }
@@ -112,5 +102,4 @@ input[type="checkbox" i] {
     .page{
         margin-top: 25%;
     }
-
  }
